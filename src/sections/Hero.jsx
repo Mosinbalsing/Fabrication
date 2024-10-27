@@ -10,7 +10,7 @@ const Hero = () => {
 
   return (
     <section className={`min-h-screen w-full flex ${isMobile || isTablet ? 'flex-col' : 'flex-row'} relative`}>
-      <div className={`w-full  ${isTablet? 'w-[100%]': 'w-[50%]'} mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-20 relative`}>
+      <div className="w-full sm:w-[50%] mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3 z-20 relative">
         <motion.p
           className="text-left hero_tag text-gray_gradient"
           initial={{ opacity: 0, y: -20 }}
