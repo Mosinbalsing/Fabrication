@@ -6,11 +6,12 @@ import { useMediaQuery } from 'react-responsive';
 const Hero = () => {
   const isMobileOrTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const isTablet = useMediaQuery({ query: "(min-width: 787px) and (max-width: 1024px)" });
+  const ismobile = useMediaQuery({ query: "(min-width: 320px) and (max-width: 430px)" });
 
 
   return (
     <section className={`min-h-screen w-full flex ${isMobileOrTablet ? 'flex-col' : 'flex-row'} relative`}>
-      <div className={`${isTablet?'w-[100%] bg-white':'w-[100%]'}w-[50%]  mx-auto flex flex-col sm:mt-36 mt-[30%] c-space gap-3 z-20 relative`}>
+      <div className={`${isTablet?'w-[100%] bg-white':''} ${ismobile?'w-[100%] bg-white':''}w-[50%]  mx-auto flex flex-col sm:mt-36 mt-[30%] c-space gap-3 z-20 relative`}>
         <motion.p
           className="text-left hero_tag text-gray_gradient"
           initial={{ opacity: 0, y: -20 }}
