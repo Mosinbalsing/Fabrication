@@ -1,6 +1,6 @@
 import './App.css'
 import Hero from './sections/Hero'
-import { Navbar } from './sections/Navbar'
+import { Navbar } from './Components/Navbar'
 
 function App() {
   return (
