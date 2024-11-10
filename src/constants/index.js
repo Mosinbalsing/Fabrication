@@ -320,32 +320,115 @@ export const navLinks = [
   };
   
   
-  export const workExperiences = [
+ export const Gates = [
     {
       id: 1,
-      name: 'Framer',
-      pos: 'Lead Web Developer',
-      duration: '2022 - Present',
-      title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-      icon: '/assets/framer.svg',
-      animation: 'victory',
+      name: 'Gate 1',
+      path: '/assets/Gate1.jpg',
     },
     {
       id: 2,
-      name: 'Figma',
-      pos: 'Web Developer',
-      duration: '2020 - 2022',
-      title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-      icon: '/assets/figma.svg',
-      animation: 'clapping',
+      name: 'Gate 2',
+      path: '/assets/Gate2.jpg',
     },
     {
       id: 3,
-      name: 'Notion',
-      pos: 'Junior Web Developer',
-      duration: '2019 - 2020',
-      title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-      icon: '/assets/notion.svg',
-      animation: 'salute',
+      name: 'Gate 3',
+      path: '/assets/Gate3.jpg',
+    },
+    {
+      id: 4,
+      name: 'Gate 4',
+      path: '/assets/Gate4.jpg',
+    },
+    {
+      id: 5,
+      name: 'Gate 5',
+      path: '/assets/Gate5.jpg',
+    },
+    {
+      id: 6,
+      name: 'Gate 6',
+      path: '/assets/Gate6.jpg',
+    },  
+    {
+      id: 7,
+      name: 'Gate 7',
+      path: '/assets/Gate7.jpg',
+    },
+    {
+      id: 8,
+      name: 'Gate 8',
+      path: '/assets/Gate8.jpg',
+    },
+    {
+      id: 9,
+      name: 'Gate 9',
+      path: '/assets/Gate9.jpg',
+    },
+    {
+      id: 10,
+      name: 'Gate 10',
+      path: '/assets/Gate10.jpg',
+    },
+    {
+      id: 11,
+      name: 'Gate 11',
+      path: '/assets/Gate11.jpg',
+    },
+    {
+      id: 12,
+      name: 'Gate 12',
+      path: '/assets/Gate12.jpg',
+    },
+    {
+      id: 13,
+      name: 'Gate 13',
+      path: '/assets/Gate13.jpg',
+    },
+    {
+      id: 14,
+      name: 'Gate 14',
+      path: '/assets/Gate14.jpg',
+    },
+    {
+      id: 15,
+      name: 'Gate 15',
+      path: '/assets/Gate15.jpg',
+    },
+    {
+      id: 16,
+      name: 'Gate 16',
+      path: '/assets/Gate16.jpg',
+    },
+    {
+      id: 17,
+      name: 'Gate 17',
+      path: '/assets/Gate17.jpg',
+    },
+    {
+      id: 18,
+      name: 'Gate 18',
+      path: '/assets/Gate18.jpg',
+    },  
+    {
+      id: 19,
+      name: 'Gate 19',
+      path: '/assets/Gate19.jpg',
+    },
+    {
+      id: 20,
+      name: 'Gate 20',
+      path: '/assets/Gate20.jpg',
+    },
+    {
+      id: 21,
+      name: 'Gate 21',
+      path: '/assets/Gate21.jpg',
+    },
+    {
+      id: 22,
+      name: 'Gate 22',
+      path: '/assets/Gate22.jpg',
     },
   ];
