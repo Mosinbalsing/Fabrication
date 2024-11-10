@@ -550,3 +550,124 @@ export const Grils = [
       path: '/assets/Grils/Gril10.jpg',
     },
 ];
+export const Shades = [
+  {
+    id: 6,
+    name: 'Shade 6',
+    path: '/assets/Shades/Shade6.jpg',
+  },
+  
+  
+  {
+    id: 11,
+    name: 'Shade 11',
+    path: '/assets/Shades/Shade11.jpg',
+  },
+  {
+    id: 9,
+    name: 'Shade 9',
+    path: '/assets/Shades/Shade9.jpg',
+  },
+  
+  {
+    id: 4,
+    name: 'Shade 4',
+    path: '/assets/Shades/Shade4.jpg',
+  },
+  {
+    id: 5,
+    name: 'Shade 5',
+    path: '/assets/Shades/Shade5.jpg',
+  },
+  {
+    id: 1,
+    name: 'Shade 1',
+    path: '/assets/Shades/Shade1.jpg',
+  },
+  {
+    id: 7,
+    name: 'Shade 7',
+    path: '/assets/Shades/Shade7.jpg',
+  },
+  {
+    id: 8,
+    name: 'Shade 8',
+    path: '/assets/Shades/Shade8.jpg',
+  },
+  {
+    id: 3,
+    name: 'Shade 3',
+    path: '/assets/Shades/Shade3.jpg',
+  },
+  {
+    id: 10,
+    name: 'Shade 10',
+    path: '/assets/Shades/Shade10.jpg',
+  },
+  {
+    id: 2,
+    name: 'Shade 2',
+    path: '/assets/Shades/Shade2.jpg',
+  },
+  {
+    id: 12,
+    name: 'Shade 12',
+    path: '/assets/Shades/Shade12.jpg',
+  },
+  {
+    id: 13,
+    name: 'Shade 13',
+    path: '/assets/Shades/Shade13.jpg',
+  },
+  {
+    id: 14,
+    name: 'Shade 14',
+    path: '/assets/Shades/Shade14.jpg',
+  },
+  {
+    id: 15,
+    name: 'Shade 15',
+    path: '/assets/Shades/Shade15.jpg',
+  },
+  {
+    id: 16,
+    name: 'Shade 16',
+    path: '/assets/Shades/Shade16.jpg',
+  },
+ 
+]
+export const Shatars = [
+  {
+    id: 1,
+    name: 'Shatar 1',
+    path: '/assets/Shatars/Shatar1.jpg',
+  },
+  {
+    id: 2,
+    name: 'Shatar 2',
+    path: '/assets/Shatars/Shatar2.jpg',
+  },
+  {
+    id: 3,
+    name: 'Shatar 3',
+    path: '/assets/Shatars/Shatar3.jpg',
+  },
+  {
+    id: 4,
+    name: 'Shatar 4',
+    path: '/assets/Shatars/Shatar4.jpg',
+  },
+  
+]
+export const Steps  = [ 
+  {   
+    id: 1,
+    name: 'Step 1',
+    path: '/assets/Steps/Steps1.jpg',
+  },  
+  {
+    id: 2,
+    name: 'Step 2',
+    path: '/assets/Steps/Steps2_1.jpg',
+  },  
+]

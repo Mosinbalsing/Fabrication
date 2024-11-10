@@ -2,16 +2,18 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import Masonry from 'react-masonry-css'; // Import Masonry package
-import { Gates, Doors, Furnitures , Grils } from '@/constants'; // Assuming Gates and Doors are arrays
+import { Gates, Doors , Furnitures , Grils, Shades, Shatars, Steps } from '@/constants'; // Assuming Gates and Doors are arrays
 
 // Create an object for images
 const images = {
   Gates: Gates,
   Doors: Doors,
   Furnitures: Furnitures,
-  Grils: Grils
-
-  // Add more categories here with their respective images
+  Grils: Grils,
+  Shades: Shades,
+  Shatars: Shatars,
+  Steps: Steps
+  
 };
 
 const tabs = [
@@ -20,7 +22,7 @@ const tabs = [
   { name: 'Gates', content: 'This is the Gates section.' },
   { name: 'Grils', content: 'This is the Grils section.' },
   { name: 'Shades', content: 'This is the Shades section.' },
-  { name: 'Shatar', content: 'This is the Shatar section.' },
+  { name: 'Shatars', content: 'This is the Shatar section.' },
   { name: 'Steps', content: 'This is the Steps section.' },
 ];
 
@@ -46,6 +48,9 @@ export const Gallery = () => {
 
   // Show only the first 9 images or all based on 'showAll' state
   const imagesToShow = showAll ? activeImages : activeImages.slice(0, 4);
+
+  // Conditional styles to center images if there are 1, 2, or 3 images
+  const imageContainerStyle = imagesToShow.length <= 3 ? 'flex justify-center' : 'my-masonry-grid';
 
   return (
     <div className="flex flex-col items-center p-5 rounded-lg shadow-lg">
@@ -73,23 +78,25 @@ export const Gallery = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.5 }}
-        className="w-full p-6 bg-[#1C1C21] text-center text-lg text-gray-300 rounded-lg"
+        className="w-full p-6 bg-[#1C1C21] text-center text-lg text-gray-300 rounded-lg flex justify-center"
       >
         {tabs.find((tab) => tab.name === activeTab).content}
       </motion.div>
 
       {/* Masonry Layout for Images */}
-      <Masonry
-        breakpointCols={{ 'default': 4, '1100': 3, '700': 2, '500': 1 }}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      >
-        {imagesToShow.map((image, index) => (
-          <div key={index} className="masonry-image">
-            <img src={image.path} alt={`${activeTab} ${index}`} className="w-full h-auto rounded-lg shadow-md mb-4" />
-          </div>
-        ))}
-      </Masonry>
+      <div className={imageContainerStyle}>
+        <Masonry
+          breakpointCols={{ 'default': 4, '1100': 3, '700': 2, '500': 1 }}
+          className="my-masonry-grid"
+          columnClassName="my-masonry-grid_column"
+        >
+          {imagesToShow.map((image, index) => (
+            <div key={index} className="masonry-image">
+              <img src={image.path} alt={`${activeTab} ${index}`} className="w-full h-auto rounded-lg shadow-md mb-4" />
+            </div>
+          ))}
+        </Masonry>
+      </div>
 
       {/* Show More Button */}
       {activeImages.length > 4 && (
