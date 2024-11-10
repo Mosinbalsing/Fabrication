@@ -1,6 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
+import Masonry from 'react-masonry-css'; // Import Masonry package
+import { Gates, Doors, Furnitures , Grils } from '@/constants'; // Assuming Gates and Doors are arrays
+
+// Create an object for images
+const images = {
+  Gates: Gates,
+  Doors: Doors,
+  Furnitures: Furnitures,
+  Grils: Grils
+
+  // Add more categories here with their respective images
+};
 
 const tabs = [
   { name: 'Doors', content: 'This is the Doors section.' },
@@ -14,6 +26,7 @@ const tabs = [
 
 export const Gallery = () => {
   const [activeTab, setActiveTab] = useState(tabs[0].name);
+  const [showAll, setShowAll] = useState(false); // State to control "Show More"
 
   // Media queries for responsiveness
   const isMobile = useMediaQuery({ maxWidth: 640 });
@@ -28,8 +41,14 @@ export const Gallery = () => {
     rounded-md font-medium transition-all duration-300
   `;
 
+  // Get the images for the active tab
+  const activeImages = images[activeTab] || [];
+
+  // Show only the first 9 images or all based on 'showAll' state
+  const imagesToShow = showAll ? activeImages : activeImages.slice(0, 4);
+
   return (
-    <div className="flex flex-col items-center p-5  rounded-lg shadow-lg">
+    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg">
       {/* Tab Buttons Container */}
       <div className={`flex ${isMobile ? 'grid grid-cols-2 gap-7' : 'flex-wrap space-x-4'} justify-center p-4 bg-[#1C1C21] rounded-lg mb-6`}>
         {tabs.map((tab) => (
@@ -58,7 +77,29 @@ export const Gallery = () => {
       >
         {tabs.find((tab) => tab.name === activeTab).content}
       </motion.div>
+
+      {/* Masonry Layout for Images */}
+      <Masonry
+        breakpointCols={{ 'default': 4, '1100': 3, '700': 2, '500': 1 }}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
+        {imagesToShow.map((image, index) => (
+          <div key={index} className="masonry-image">
+            <img src={image.path} alt={`${activeTab} ${index}`} className="w-full h-auto rounded-lg shadow-md mb-4" />
+          </div>
+        ))}
+      </Masonry>
+
+      {/* Show More Button */}
+      {activeImages.length > 4 && (
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="mt-4 px-6 py-3 bg-[#3A3A49] text-white rounded-md font-medium transition-all duration-300"
+        >
+          {showAll ? 'Show Less' : 'Show More'}
+        </button>
+      )}
     </div>
   );
 };
-

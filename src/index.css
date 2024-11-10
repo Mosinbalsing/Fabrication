@@ -266,3 +266,27 @@ body {
     @apply bg-background text-foreground;
   }
 }
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+.masonry-image {
+  margin-bottom: 30px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.masonry-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

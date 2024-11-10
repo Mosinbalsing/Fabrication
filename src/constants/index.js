@@ -324,111 +324,229 @@ export const navLinks = [
     {
       id: 1,
       name: 'Gate 1',
-      path: '/assets/Gate1.jpg',
+      path: '/assets/Gates/Gate1.jpg',
     },
     {
       id: 2,
       name: 'Gate 2',
-      path: '/assets/Gate2.jpg',
+      path: '/assets/Gates/Gate2.jpg',
     },
     {
       id: 3,
       name: 'Gate 3',
-      path: '/assets/Gate3.jpg',
+      path: '/assets/Gates/Gate3.jpg',
     },
     {
       id: 4,
       name: 'Gate 4',
-      path: '/assets/Gate4.jpg',
+      path: '/assets/Gates/Gate4.jpg',
     },
     {
       id: 5,
       name: 'Gate 5',
-      path: '/assets/Gate5.jpg',
-    },
+      path: '/assets/Gates/Gate5.jpg',
+    },  
     {
       id: 6,
       name: 'Gate 6',
-      path: '/assets/Gate6.jpg',
-    },  
+      path: '/assets/Gates/Gate6.jpg',
+    },
     {
       id: 7,
       name: 'Gate 7',
-      path: '/assets/Gate7.jpg',
+      path: '/assets/Gates/Gate7.jpg',
     },
     {
       id: 8,
       name: 'Gate 8',
-      path: '/assets/Gate8.jpg',
+      path: '/assets/Gates/Gate8.jpg',
     },
     {
       id: 9,
       name: 'Gate 9',
-      path: '/assets/Gate9.jpg',
+      path: '/assets/Gates/Gate9.jpg',
     },
     {
       id: 10,
       name: 'Gate 10',
-      path: '/assets/Gate10.jpg',
+      path: '/assets/Gates/Gate10.jpg',
     },
     {
       id: 11,
       name: 'Gate 11',
-      path: '/assets/Gate11.jpg',
+      path: '/assets/Gates/Gate11.jpg',
     },
     {
       id: 12,
       name: 'Gate 12',
-      path: '/assets/Gate12.jpg',
+      path: '/assets/Gates/Gate12.jpg',
     },
     {
       id: 13,
       name: 'Gate 13',
-      path: '/assets/Gate13.jpg',
+      path: '/assets/Gates/Gate13.jpg',
+    },
+    {
+      id: 19,
+      name: 'Gate 19',
+      path: '/assets/Gates/Gate19.jpg',
     },
     {
       id: 14,
       name: 'Gate 14',
-      path: '/assets/Gate14.jpg',
+      path: '/assets/Gates/Gate14.jpg',
     },
     {
       id: 15,
       name: 'Gate 15',
-      path: '/assets/Gate15.jpg',
+      path: '/assets/Gates/Gate15.jpg',
     },
     {
       id: 16,
       name: 'Gate 16',
-      path: '/assets/Gate16.jpg',
+      path: '/assets/Gates/Gate16.jpg',
     },
     {
       id: 17,
       name: 'Gate 17',
-      path: '/assets/Gate17.jpg',
+      path: '/assets/Gates/Gate17.jpg',
     },
     {
       id: 18,
       name: 'Gate 18',
-      path: '/assets/Gate18.jpg',
-    },  
-    {
-      id: 19,
-      name: 'Gate 19',
-      path: '/assets/Gate19.jpg',
+      path: '/assets/Gates/Gate18.jpg',
     },
+    
     {
       id: 20,
       name: 'Gate 20',
-      path: '/assets/Gate20.jpg',
+      path: '/assets/Gates/Gate20.jpg',
+    },  
+    
+   
+];
+export const Doors = [
+    {
+      id: 1,
+      name: 'Door 1',
+      path: '/assets/Doors/Door1.jpg',
     },
     {
-      id: 21,
-      name: 'Gate 21',
-      path: '/assets/Gate21.jpg',
+      id: 2,
+      name: 'Door 2',
+      path: '/assets/Doors/Door2.jpg',
     },
     {
-      id: 22,
-      name: 'Gate 22',
-      path: '/assets/Gate22.jpg',
+      id: 5,
+      name: 'Door 5',
+      path: '/assets/Doors/Door5.jpg',
     },
-  ];
+    {
+      id: 6,
+      name: 'Door 6',
+      path: '/assets/Doors/Door6.jpg',
+    },
+    {
+      id: 3,
+      name: 'Door 3',
+      path: '/assets/Doors/Door3.jpg',
+    },
+   
+    {
+      id: 7,
+      name: 'Door 7',
+      path: '/assets/Doors/Door7.jpg',
+    },
+    {
+      id: 8,
+      name: 'Door 8',
+      path: '/assets/Doors/Door8.jpg',
+    },
+    {
+      id: 9,
+      name: 'Door 9',
+      path: '/assets/Doors/Door9.jpg',
+    },
+    {
+      id: 4,
+      name: 'Door 4',
+      path: '/assets/Doors/Door4.jpg',
+    },
+   
+];
+export const Furnitures = [
+    {
+      id: 1,
+      name: 'Furniture 1',
+      path: '/assets/Furnitures/Furniture1.jpg',
+    },
+    {
+      id: 2,
+      name: 'Furniture 2',
+      path: '/assets/Furnitures/Furniture2.jpg',
+    },
+    {
+      id: 3,
+      name: 'Furniture 3',
+      path: '/assets/Furnitures/Furniture3.jpg',
+    },
+];
+export const Grils = [
+    
+  {
+    id: 6,
+    name: 'Gril 6',
+    path: '/assets/Grils/Gril6.jpg',
+  },  
+    {
+      id: 4,
+      name: 'Gril 4',
+      path: '/assets/Grils/Gril4.jpg',
+    },
+    {
+      id: 2,
+      name: 'Gril 2',
+      path: '/assets/Grils/Gril2.jpg',
+    },
+    {
+      id: 3,
+      name: 'Gril 3',
+      path: '/assets/Grils/Gril3.jpg',
+    },
+    {
+      id: 1,
+      name: 'Gril 1',
+      path: '/assets/Grils/Gril1.jpg',
+    },
+    
+    {
+      id: 5,
+      name: 'Gril 5',
+      path: '/assets/Grils/Gril5.jpg',
+    },
+    {
+      id: 6,
+      name: 'Gril 6',
+      path: '/assets/Grils/Gril6.jpg',
+    },  
+    {
+      id: 7,
+      name: 'Gril 7',
+      path: '/assets/Grils/Gril7.jpg',
+    },
+    {
+      id: 8,
+      name: 'Gril 8',
+      path: '/assets/Grils/Gril8.jpg',
+    },
+    {
+      id: 9,
+      name: 'Gril 9',
+      path: '/assets/Grils/Gril9.jpg',
+    },
+    {
+      id: 10,
+      name: 'Gril 10',
+      path: '/assets/Grils/Gril10.jpg',
+    },
+];
