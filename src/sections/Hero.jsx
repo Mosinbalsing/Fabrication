@@ -33,48 +33,19 @@ const Hero = () => {
       </div>
 
       <div className={`w-[50%] ${isMobileOrTablet ? 'flex-col w-full' : 'flex-row'} flex justify-center items-center sm:mt-36 mt-20 gap-3 z-20 relative`}>
-        {isMobileOrTablet ? (
-          <>
-            {/* Display images in a column on mobile and tablet view */}
-            <motion.img
-              src="assets/hero.png"
-              alt="fabrication"
-              className="w-[80%] h-auto rounded border-white mb-4"
-              initial={{ opacity: 0, y: -30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
-            <motion.img
-              src="assets/hero2.png"
-              alt="fabrication"
-              className="w-[80%] h-auto rounded border-white mb-4"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            />
-          </>
-        ) : (
-          <>
-            {/* Display images side-by-side on larger screens */}
-            <motion.img
-              src="assets/hero.png"
-              alt="fabrication"
-              className="w-[40%] h-[50%] rounded border-white"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            />
-            <motion.img
-              src="assets/hero2.png"
-              alt="fabrication"
-              className="w-[40%] h-[50%] rounded border-white mb-[20%] ml-[5%] top-0"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            />
-          </>
-        )}
-      </div>
+  {["hero.png", "hero2.png"].map((src, index) => (
+    <motion.img
+      key={src}
+      src={`assets/${src}`}
+      alt="fabrication"
+      className={`${isMobileOrTablet ? 'w-[80%] mb-4' : 'w-[40%] h-[50%]'} h-auto rounded border-white ${!isMobileOrTablet && index === 1 ? 'mb-[20%] ml-[5%]' : ''}`}
+      initial={{ opacity: 0, x: isMobileOrTablet ? 0 : index === 0 ? -50 : 50, y: isMobileOrTablet ? (index === 0 ? -30 : 30) : 0 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.8, delay: index * 0.3, ease: "easeOut" }}
+    />
+  ))}
+</div>
+
 
       {/* Bottom button section */}
       <div className="absolute bottom-7 left-0 right-0 w-full z-20 c-space">
