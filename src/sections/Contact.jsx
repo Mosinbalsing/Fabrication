@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../utils/motion";
 import { styles } from "../style";
-import { Footers } from "./Footer";
+import { Footers } from "../Components/Footer";
 import { toast } from "react-toastify";
 
 export const Contact = () => {
