@@ -73,7 +73,7 @@ export const Contact = () => {
       {/* Form Section */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[1] sm:flex-[0.75] bg-black-600 p-6 sm:p-8 rounded-2xl shadow-lg xl:scale-100 sm:scale-75"
+        className="flex-[1] sm:flex-[0.75] bg-[#1C1C21] p-6 sm:p-8 rounded-2xl shadow-lg xl:scale-100 sm:scale-75"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>

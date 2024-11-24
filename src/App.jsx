@@ -5,7 +5,7 @@ import Work from './sections/Work'
 import { Contact } from './sections/Contact'
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AboutUs from './sections/AboutUs'
+import { AboutUs } from './sections/AboutUs'
 function App() {
   return (
     <>
