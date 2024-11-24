@@ -67,7 +67,7 @@ export const Contact = () => {
 
   return (
     <div
-      className={`px-6 sm:px-12 py-10 xl:mt-12 flex xl:flex-row  flex-col gap-10 overflow-hidden  `}
+      className={`px-6 sm:px-12 py-10 xl:mt-12 flex xl:flex-row  flex-col gap-10   `}
       id="contact"
     >
       {/* Form Section */}

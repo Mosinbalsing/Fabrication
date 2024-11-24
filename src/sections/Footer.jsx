@@ -4,8 +4,8 @@ import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export const Footers = () => {
   return (
-    <Footer container className="mt-8 h-[46%] bg-black-600 text-white xl:scale-100 sm:scale-50">
-      <div className="w-full p-6">
+    <Footer container className="mt-8 xl:h-[46%] bg-black-600 text-white xl:scale-100 sm:scale-50 sm:text-center sm:h-full">
+      <div className="w-full p-6 text-center">
         {/* Footer Header */}
         <div className="mb-8 text-center sm:text-left">
           <h1 className="text-3xl font-bold text-white mb-6 animate-fade-in">
@@ -16,7 +16,7 @@ export const Footers = () => {
         {/* Footer Links and Contact Section */}
         <div className="flex flex-wrap gap-12 justify-center sm:justify-between">
           {/* About Section */}
-          <div className="flex flex-col items-center sm:items-start">
+          <div className="flex flex-col items-center sm:items-start sm:text-center  ">
             <h2 className="text-lg font-semibold mb-4 cursor-pointer">About</h2>
             <Footer.Link
               href="#"
