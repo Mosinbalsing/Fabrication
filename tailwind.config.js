@@ -1,7 +1,8 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
+const flowbite = require("flowbite-react/tailwind");
 export default {
     darkMode: ['class'],
-    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}',flowbite.content()],
   theme: {
   	extend: {
   		fontFamily: {
@@ -74,5 +75,5 @@ export default {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"),flowbite.plugin()],
 };
