@@ -177,7 +177,7 @@ export const Contact = () => {
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 w-full xl:h-auto md:h-[550px] h-[350px] "
       >
-        <div className="map-container rounded-xl overflow-hidden h-[50%] shadow-lg xl:block sm:hidden">
+        <div className="map-container rounded-xl overflow-hidden h-[50%] shadow-lg xl:block">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.99355005482!2d73.85546747503568!3d18.438601982639124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eba1e7dc82d7%3A0xfe57f658b2cd9e56!2sGalaxy%20Fabrication!5e0!3m2!1sen!2sin!4v1732429229833!5m2!1sen!2sin"
             width="100%"

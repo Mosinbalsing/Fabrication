@@ -4,7 +4,7 @@ import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 export const Footers = () => {
   return (
-    <Footer container className="mt-8 xl:h-[46%] bg-black-600 text-white xl:scale-100 sm:scale-50 sm:text-center sm:h-full">
+    <Footer container className="mt-8 xl:h-[46%] bg-black-600 text-white xl:scale-100 sm:scale-50 ">
       <div className="w-full p-6 text-center">
         {/* Footer Header */}
         <div className="mb-8 text-center sm:text-left">
