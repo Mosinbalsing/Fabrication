@@ -53,7 +53,7 @@ export const Gallery = () => {
   const imageContainerStyle = imagesToShow.length <= 3 ? 'flex justify-center' : 'my-masonry-grid';
 
   return (
-    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg">
+    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg xl:max-w-7xl mx-auto">
       {/* Tab Buttons Container */}
       <div className={`flex ${isMobile ? 'grid grid-cols-2 gap-7' : 'flex-wrap space-x-4'} justify-center p-4 bg-[#1C1C21] rounded-lg mb-6`}>
         {tabs.map((tab) => (
