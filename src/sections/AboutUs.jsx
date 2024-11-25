@@ -5,7 +5,7 @@ import { styles } from "../style";
 export const AboutUs = () => {
   return (
     <motion.section
-      className="bg-[#1C1C21] text-white px-12 py-16 rounded-xl shadow-lg m-5"
+      className="bg-[#1C1C21] text-white px-36 py-20 rounded-xl shadow-lg m-5 "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
