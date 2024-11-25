@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section className={`xl:min-h-[750px] w-full flex  max-w-7xl mx-auto ${isMobileOrTablet ? 'flex-col' : 'flex-row'} relative`} id="home">
-      <div className={` xl:w-[50%] md:w-[100%]${isTablet?'w-[100%]':''} ${ismobile?'w-[100%] ':''}w-[50%]  mx-auto flex flex-col sm:mt-36 mt-[30%] c-space gap-3 z-20 relative`}>
+      <div className={` xl:w-[50%] md:w-[100%]${isTablet?'w-[100%]':''} ${ismobile?'w-[100%] ':''}sm:w-[100%]  mx-auto flex flex-col sm:mt-36 mt-[30%] c-space gap-3 z-20 relative`}>
         <motion.p
           className="text-left hero_tag text-gray_gradient"
           initial={{ opacity: 0, y: -20 }}
