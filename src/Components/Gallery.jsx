@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import Masonry from 'react-masonry-css'; // Import Masonry package
 import { Gates, Doors , Furnitures , Grils, Shades, Shatars, Steps } from '@/constants'; // Assuming Gates and Doors are arrays
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 // Create an object for images
 const images = {
@@ -51,9 +53,11 @@ export const Gallery = () => {
 
   // Conditional styles to center images if there are 1, 2, or 3 images
   const imageContainerStyle = imagesToShow.length <= 3 ? 'flex justify-center' : 'my-masonry-grid';
-
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
   return (
-    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg xl:max-w-7xl mx-auto">
+    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg xl:max-w-7xl mx-auto" data-aos="zoom-in">
       {/* Tab Buttons Container */}
       <div className={`flex ${isMobile ? 'grid grid-cols-2 gap-7' : 'flex-wrap space-x-4'} justify-center p-4 bg-[#1C1C21] rounded-lg mb-6`}>
         {tabs.map((tab) => (
@@ -65,6 +69,7 @@ export const Gallery = () => {
                 ? 'bg-[#3A3A49] text-white shadow transform scale-105'
                 : 'bg-[#2A2A35] text-gray-400 hover:bg-[#3A3A49] hover:text-white'
             }`}
+            
           >
             {tab.name}
           </button>
@@ -91,7 +96,7 @@ export const Gallery = () => {
           columnClassName="my-masonry-grid_column"
         >
           {imagesToShow.map((image, index) => (
-            <div key={index} className="masonry-image">
+            <div key={index} className="masonry-image" data-aos="zoom-out">
               <img src={image.path} alt={`${activeTab} ${index}`} className="w-full h-auto rounded-lg shadow-md mb-4" />
             </div>
           ))}

@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import  { useState , useEffect} from "react";
 import { navLinks } from "../constants";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const NavItems = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <ul className="nav-ul">
       {navLinks.map(({ id, name, href }) => (
-        <li key={id} className="nav-li">
+        <li key={id} className="nav-li" >
           <a href={href} className="nav-li_a" onClick={() => {}}>
             {name}
           </a>
@@ -23,6 +28,7 @@ export const Navbar = () => {
           <a
             href="/"
             className="text-neutral-400 hover:text-white font-bold text-xl transition-colors"
+            data-aos="slide-down"
           >
            Galexy Fabrication
           </a>

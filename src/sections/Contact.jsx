@@ -1,12 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../utils/motion";
 import { styles } from "../style";
 import { Footers } from "../Components/Footer";
 import { toast } from "react-toastify";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Contact = () => {
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -64,16 +67,20 @@ export const Contact = () => {
         }
       );    
   };
-
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
   return (
     <div
       className={`px-6 sm:px-12 py-10 xl:mt-12 flex xl:flex-row  flex-col gap-10  max-w-7xl mx-auto `}
       id="contact"
+      
     >
       {/* Form Section */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[1] sm:flex-[0.75] bg-[#1C1C21] p-6 sm:p-8 rounded-2xl shadow-lg xl:scale-100 sm:scale-75"
+        data-aos="slide-right"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
@@ -176,6 +183,7 @@ export const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 w-full xl:h-auto md:h-[550px] h-[350px] "
+        data-aos="slide-left"
       >
         <div className="map-container rounded-xl overflow-hidden h-[50%] shadow-lg xl:block">
           <iframe

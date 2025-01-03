@@ -1,10 +1,15 @@
-import React from "react";
+import {useEffect} from "react";
 import { Footer } from "flowbite-react";
 import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Footers = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <Footer container className="mt-8 xl:h-[46%] bg-[#1C1C21] text-white xl:scale-100 sm:scale-50 ">
+    <Footer container className="mt-8 xl:h-[46%] bg-[#1C1C21] text-white xl:scale-100 sm:scale-50  " data-aos="slide-left">
       <div className="w-full p-6 flex flex-wrap">
         {/* Footer Header */}
         <div className="mb-8 text-center sm:text-left">
