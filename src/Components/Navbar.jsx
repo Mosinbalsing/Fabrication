@@ -30,7 +30,7 @@ export const Navbar = () => {
             className="text-neutral-400 hover:text-white font-bold text-xl transition-colors"
             data-aos="slide-down"
           >
-           Galexy Fabrication
+           <img src="../../public/assets/Icons/icongalaxyfabrication.png" alt="galaxyfabrication" srcset="" className="w-40 " />
           </a>
           <button
             onClick={toggleMenu}

@@ -1,15 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../utils/motion";
 import { styles } from "../style";
 import { Footers } from "../Components/Footer";
 import { toast } from "react-toastify";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export const Contact = () => {
-
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -36,8 +33,8 @@ export const Contact = () => {
     // EmailJS functionality
     emailjs
       .send(
-        "service_r94x75r", // Replace with your EmailJS Service ID
-        "template_q7ockav", // Replace with your EmailJS Template ID
+        "service_hhzf6gu", // Replace with your EmailJS Service ID
+        "template_d3a4ubn", // Replace with your EmailJS Template ID
         {
           from_name: form.name,
           to_name: "MosinBalsing", // Replace with your name
@@ -47,7 +44,7 @@ export const Contact = () => {
           work: form.work,
           message: form.message,
         },
-        "eHUyMwh9N8auZeMYo" // Replace with your EmailJS Public Key
+        "8iC4h1HESb7Irrcg3" // Replace with your EmailJS Public Key
       )
       .then(
         () => {
@@ -67,20 +64,16 @@ export const Contact = () => {
         }
       );    
   };
-  useEffect(() => {
-    Aos.init({ duration: 2500 });
-  }, []);
+
   return (
     <div
       className={`px-6 sm:px-12 py-10 xl:mt-12 flex xl:flex-row  flex-col gap-10  max-w-7xl mx-auto `}
       id="contact"
-      
     >
       {/* Form Section */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[1] sm:flex-[0.75] bg-[#1C1C21] p-6 sm:p-8 rounded-2xl shadow-lg xl:scale-100 sm:scale-75"
-        data-aos="slide-right"
+        className="flex-[1] sm:flex-[0.75] bg-[#1C1C21] p-6 sm:p-8 rounded-2xl shadow-lg xl:scale-100 sm:scale-75 lg:h-[900px]"
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
@@ -183,9 +176,8 @@ export const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 w-full xl:h-auto md:h-[550px] h-[350px] "
-        data-aos="slide-left"
       >
-        <div className="map-container rounded-xl overflow-hidden h-[50%] shadow-lg xl:block">
+        <div className="map-container rounded-xl overflow-hidden h-[42%] shadow-lg xl:block">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.99355005482!2d73.85546747503568!3d18.438601982639124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eba1e7dc82d7%3A0xfe57f658b2cd9e56!2sGalaxy%20Fabrication!5e0!3m2!1sen!2sin!4v1732429229833!5m2!1sen!2sin"
             width="100%"

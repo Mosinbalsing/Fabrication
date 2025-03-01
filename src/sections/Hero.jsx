@@ -77,8 +77,6 @@ const Hero = () => {
       {/* Bottom button section */}
       <div
         className="absolute bottom-7 left-0 right-0 w-full z-20 c-space"
-        data-aos="fade-up"
-        data-aos-delay="200"
       >
         <a href="#work" className="w-fit">
           <Button

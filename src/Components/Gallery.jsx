@@ -1,10 +1,8 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import Masonry from 'react-masonry-css'; // Import Masonry package
-import { Gates, Doors , Furnitures , Grils, Shades, Shatars, Steps } from '@/constants'; // Assuming Gates and Doors are arrays
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import { Gates, Doors, Furnitures, Grils, Shades, Shatars, Steps } from '@/constants'; // Assuming Gates and Doors are arrays
 
 // Create an object for images
 const images = {
@@ -14,8 +12,7 @@ const images = {
   Grils: Grils,
   Shades: Shades,
   Shatars: Shatars,
-  Steps: Steps
-  
+  Steps: Steps,
 };
 
 const tabs = [
@@ -35,31 +32,28 @@ export const Gallery = () => {
   // Media queries for responsiveness
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const isTablet = useMediaQuery({ minWidth: 641, maxWidth: 1024 });
-  const isLaptop = useMediaQuery({ minWidth: 1025 });
 
   // Dynamic button styles based on screen size
   const buttonStyles = `
     ${isMobile ? 'px-3 py-2 text-xs w-full' : ''}
     ${isTablet ? 'px-4 py-2 text-sm' : ''}
-    ${isLaptop ? 'px-6 py-3 text-base' : ''}
+    ${!isMobile && !isTablet ? 'px-6 py-3 text-base' : ''}
     rounded-md font-medium transition-all duration-300
   `;
 
   // Get the images for the active tab
   const activeImages = images[activeTab] || [];
 
-  // Show only the first 9 images or all based on 'showAll' state
+  // Show only the first 4 images or all based on 'showAll' state
   const imagesToShow = showAll ? activeImages : activeImages.slice(0, 4);
 
   // Conditional styles to center images if there are 1, 2, or 3 images
   const imageContainerStyle = imagesToShow.length <= 3 ? 'flex justify-center' : 'my-masonry-grid';
-  useEffect(() => {
-    Aos.init({ duration: 2500 });
-  }, []);
+
   return (
-    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg xl:max-w-7xl mx-auto" data-aos="zoom-in">
+    <div className="flex flex-col items-center p-5 rounded-lg shadow-lg xl:max-w-7xl mx-auto">
       {/* Tab Buttons Container */}
-      <div className={`flex ${isMobile ? 'grid grid-cols-2 gap-7' : 'flex-wrap space-x-4'} justify-center p-4 bg-[#1C1C21] rounded-lg mb-6`}>
+      <div className={`flex ${isMobile ? 'grid grid-cols-2 gap-2' : 'flex-wrap gap-4'} justify-center p-4 bg-[#1C1C21] rounded-lg mb-6`}>
         {tabs.map((tab) => (
           <button
             key={tab.name}
@@ -69,7 +63,6 @@ export const Gallery = () => {
                 ? 'bg-[#3A3A49] text-white shadow transform scale-105'
                 : 'bg-[#2A2A35] text-gray-400 hover:bg-[#3A3A49] hover:text-white'
             }`}
-            
           >
             {tab.name}
           </button>
@@ -91,12 +84,12 @@ export const Gallery = () => {
       {/* Masonry Layout for Images */}
       <div className={imageContainerStyle}>
         <Masonry
-          breakpointCols={{ 'default': 4, '1100': 3, '700': 2, '500': 1 }}
+          breakpointCols={isMobile ? 1 : isTablet ? 2 : 4}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column"
         >
           {imagesToShow.map((image, index) => (
-            <div key={index} className="masonry-image" data-aos="zoom-out">
+            <div key={index} className="masonry-image">
               <img src={image.path} alt={`${activeTab} ${index}`} className="w-full h-auto rounded-lg shadow-md mb-4" />
             </div>
           ))}
